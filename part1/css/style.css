@@ -1,0 +1,65 @@
+@charset "UTF-8"
+
+html {
+  /* 
+    一般的なブラウザのデフォルトフォントサイズは16px
+    16px * 62.5% = 10px 
+  */
+  font-size: 62.5%;
+}
+
+body {
+  color: #333;
+  /*
+    rem(= root + em) 
+    ルート要素のfont-sizeを1とした倍率を指定する
+    1.2rem = 10px(html) * 1.2 = 12px
+  */
+  font-size: 1.2rem;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #d03c56;
+  text-decoration: none;
+}
+
+.header {
+  width: 100%;
+  padding: 28px 0 10px;
+  box-shadow: 0 0 10px 1px #e3e3e3;
+}
+
+.wrapper {
+  width: 970px;
+  margin: 30px auto 40px;
+}
+
+.main {
+  display: block;
+  float: left;
+  width: 660px;
+}
+
+.sidemenu {
+  float: right;
+  width: 275px;
+}
+
+.footer {
+  width: 100%;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
